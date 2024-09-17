@@ -11,8 +11,8 @@ class FlisterMovie {
     var title: String? = null
 
     @JvmField
-    @SerializedName("author")
-    var author: String? = null
+    @SerializedName("description")
+    var description: String? = null
 
     //TODO bookImageUrl
 
