@@ -5,14 +5,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FlisterMoviesRecyclerViewAdapter(
-    private val movies: List<FlisterMovie>,
+class FlixsterMoviesRecyclerViewAdapter(
+    private val movies: List<FlixsterMovie>,
     private val mListener: OnListFragmentInteractionListener?
-    ): RecyclerView.Adapter<FlisterMoviesRecyclerViewAdapter.MovieViewHolder> {
+    ): RecyclerView.Adapter<FlixsterMoviesRecyclerViewAdapter.MovieViewHolder> {
         override fun onCreateViewHolder(
             parent: ViewGroup,
             viewType: Int
-        ): FlisterMoviesRecyclerViewAdapter.MovieViewHolder {
+        ): FlixsterMoviesRecyclerViewAdapter.MovieViewHolder {
             TODO("Not yet implemented")
         }
         inner class MovieViewHolder(val mView: View) : RecyclerView.ViewHolder(mView){
@@ -20,7 +20,7 @@ class FlisterMoviesRecyclerViewAdapter(
             var mMovieTitle: TextView = mView.findViewById<View>(R.id.movie_title) as TextView
             var mMovieDes: TextView = mView.findViewById<View>(R.id.movie_description) as TextView
 
-            override fun tostring(): String{
+            override fun toString(): String{
                 return mMovieTitle.toString() + " --"+ mMovieDes.text + "-- "
             }
         }

@@ -2,7 +2,7 @@ package com.example.flixster
 
 import com.google.gson.annotations.SerializedName
 
-class FlisterMovie {
+class FlixsterMovie {
     @SerializedName("rank")
     var rank = 0
 
