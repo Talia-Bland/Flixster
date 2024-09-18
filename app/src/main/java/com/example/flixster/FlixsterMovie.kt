@@ -8,10 +8,10 @@ class FlixsterMovie {
     var title: String? = null
 
     @JvmField
-    @SerializedName("description")
+    @SerializedName("overview")
     var description: String? = null
 
    @JvmField
-   @SerializedName("movie_poster")
+   @SerializedName("poster_path")
    var moviePosterURL: String? = null
 }

@@ -42,7 +42,7 @@ class FlixsterMoviesFragment : Fragment(), OnListFragmentInteractionListener {
 
 
 
-    private fun updateAdapter(progressBar: ContentLoadingProgressBar, recyclerView: RecyclerView){
+    private fun updateAdapter(progressBar: ContentLoadingProgressBar, movieListRecyclerView: RecyclerView){
         progressBar.show()
 
         val client = AsyncHttpClient()
@@ -59,7 +59,7 @@ class FlixsterMoviesFragment : Fragment(), OnListFragmentInteractionListener {
                         val gson = Gson()
                         val arrayTutorialType = object : TypeToken<List<FlixsterMovie>>() {}.type
                         val models : List<FlixsterMovie> = gson.fromJson(resultsRawJSON, arrayTutorialType)
-                        recyclerView.adapter = FlixsterMoviesRecyclerViewAdapter(models,this@FlixsterMoviesFragment)
+                        movieListRecyclerView.adapter = FlixsterMoviesRecyclerViewAdapter(models,this@FlixsterMoviesFragment)
 
                         Log.d("FlixsterMoviesFragment",models.get(0).moviePosterURL.toString())
                         Log.d("FlixsterMoviesFragment", "response successful")
