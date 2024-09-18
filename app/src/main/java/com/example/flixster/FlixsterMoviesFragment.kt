@@ -20,7 +20,7 @@ import okhttp3.Headers
 import okhttp3.Response
 
 
-private const val API_KEY = "ENTER API KEY"
+private const val API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 
 class FlixsterMoviesFragment : Fragment(), OnListFragmentInteractionListener {
 
@@ -69,6 +69,8 @@ class FlixsterMoviesFragment : Fragment(), OnListFragmentInteractionListener {
                     override fun onFailure( statusCode: Int, headers: Headers?, errorResponse: String, t: Throwable?){
                         progressBar.hide()
 
+                        Toast.makeText(requireContext(), "Failed to fetch movies. Please check your internet connection.", Toast.LENGTH_LONG).show()
+
                         t?.message?.let{
                             Log.e("FlixsterMoviesFragment", "HTML Error Code: " + statusCode.toString() + ", Headers: " + headers.toString())
                             Log.e("NowPlayingFragment", errorResponse)
@@ -82,7 +84,7 @@ class FlixsterMoviesFragment : Fragment(), OnListFragmentInteractionListener {
 
 
     override fun onItemClick(movie: FlixsterMovie) {
-        Toast.makeText(context, "THe movie clicked: " + movie.title, Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), "THe movie clicked: " + movie.title, Toast.LENGTH_LONG).show()
     }
 
 

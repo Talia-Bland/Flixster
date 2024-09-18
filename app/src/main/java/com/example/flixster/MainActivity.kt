@@ -16,5 +16,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val supportFragmentManager = supportFragmentManager
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.content, FlixsterMoviesFragment(), null).commit()
     }
 }
