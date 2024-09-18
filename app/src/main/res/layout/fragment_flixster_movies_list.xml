@@ -6,8 +6,8 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list"
-        android:name="com.codepath.flister.FlisterMoviesFragment"
+        android:id="@+id/movieList"
+        android:name="com.codepath.flixster.FlixsterMoviesFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
@@ -17,7 +17,7 @@
         tools:listitem="@layout/fragment_flixster_movie" />
 
     <androidx.core.widget.ContentLoadingProgressBar
-        android:id="@+id/progress"
+        android:id="@+id/progressionBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
