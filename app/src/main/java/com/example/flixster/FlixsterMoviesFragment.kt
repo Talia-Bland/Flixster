@@ -69,9 +69,17 @@ class FlixsterMoviesFragment : Fragment(), OnListFragmentInteractionListener {
                     override fun onFailure( statusCode: Int, headers: Headers?, errorResponse: String, t: Throwable?){
                         progressBar.hide()
 
+                        val errorMessage = when (statusCode) {
+                            401 -> "Unauthorized: Check your API key."
+                            404 -> "Not found: Check the API endpoint."
+                            in 500..599 -> "Server error: Please try again later."
+                            else -> "Failed to fetch movies. Please check your internet connection."
+                        }
+
                         Toast.makeText(requireContext(), "Failed to fetch movies. Please check your internet connection.", Toast.LENGTH_LONG).show()
 
                         t?.message?.let{
+                            Log.e("FlixsterMovieFragment", "Error: $it")
                             Log.e("FlixsterMoviesFragment", "HTML Error Code: " + statusCode.toString() + ", Headers: " + headers.toString())
                             Log.e("NowPlayingFragment", errorResponse)
                         }
