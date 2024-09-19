@@ -1,5 +1,5 @@
 package com.example.flixster
 
 interface OnListFragmentInteractionListener {
-    fun onItemClick(movie: FlixsterMovie)
+    fun onItemClick(item: FlixsterMovie)
 }

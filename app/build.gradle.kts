@@ -47,4 +47,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.codepath.libraries:asynchttpclient:2.2.0")
     implementation ("com.google.code.gson:gson:2.10.1")
+    implementation ("com.github.bumptech.glide:glide:4.13.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.0")
 }
