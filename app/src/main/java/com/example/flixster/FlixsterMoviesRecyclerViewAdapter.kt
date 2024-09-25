@@ -13,10 +13,6 @@ class FlixsterMoviesRecyclerViewAdapter(
     private val mListener: OnListFragmentInteractionListener?):
     RecyclerView.Adapter<FlixsterMoviesRecyclerViewAdapter.MovieViewHolder>() {
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlixsterMoviesRecyclerViewAdapter.MovieViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_flixster_movie, parent,false)
-            return MovieViewHolder(view)
-        }
         inner class MovieViewHolder(val mView: View) : RecyclerView.ViewHolder(mView){
             var mMovie: FlixsterMovie? = null
             var mMovieTitle: TextView = mView.findViewById<View>(R.id.movie_title_view) as TextView
@@ -27,8 +23,17 @@ class FlixsterMoviesRecyclerViewAdapter(
                 return mMovieTitle.toString() + " --"+ mMovieDes.text + "-- "
             }
         }
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlixsterMoviesRecyclerViewAdapter.MovieViewHolder {
+            val context = parent.context
+            val inflater = LayoutInflater.from(context)
 
-        override fun onBindViewHolder(holder: MovieViewHolder, position: Int){
+            val view = inflater.inflate(R.layout.fragment_flixster_movie,parent,false)
+
+            return MovieViewHolder(view)
+        }
+
+
+        override fun onBindViewHolder(holder: FlixsterMoviesRecyclerViewAdapter.MovieViewHolder, position: Int){
             val movie = movies[position]
 
             holder.mMovie = movie
@@ -36,7 +41,7 @@ class FlixsterMoviesRecyclerViewAdapter(
             holder.mMovieDes.text = movie.description
 
             Glide.with(holder.mView)
-                .load(movie.moviePosterURL)
+                .load("https://image.tmdb.org/t/p/w500/"+movie.moviePosterURL)
                 .fitCenter()
                 .placeholder(R.drawable.placeholder_movieposter)
                 .error(R.drawable.error_image)

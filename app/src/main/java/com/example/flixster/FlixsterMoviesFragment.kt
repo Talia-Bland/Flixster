@@ -49,7 +49,7 @@ class FlixsterMoviesFragment : Fragment(), OnListFragmentInteractionListener {
         val params = RequestParams()
         params["api_key"] = API_KEY
 
-        client["http://api.themoviedb.org/3/movie/now_playing", params,
+        client["https://api.themoviedb.org/3/movie/now_playing", params,
                 object : JsonHttpResponseHandler(){
 
                     override fun onSuccess(statusCode: Int, headers: Headers, json: JSON){
