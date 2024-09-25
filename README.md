@@ -1,26 +1,26 @@
-# Android Project 3 - *Flixster*
+# Android Project 4 - *Flixster*
 
 Submitted by: **Talia Bland**
 
-**Flixster** is a movie browsing app that allows users to browse movies currently playing in theaters.
+**Flixster** is a movie browsing app that allows users to browse ... [TODO]
 
-Time spent: **29** hours spent in total
+Time spent: **X** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
-- [x] **Parse through JSON data and implement a RecyclerView to display all movies**
-- [x] **Use Glide to load and display movie poster images**
+- [ ] **Choose any endpoint on The MovieDB API except `now_playing`**
+  - Chosen Endpoint: `[TODO: FILL ME IN TO GET CREDIT]`
+- [] **Make a request to your chosen endpoint and implement a RecyclerView to display all entries**
+- [ ] **Use Glide to load and display at least one image per entry**
+- [ ] **Click on an entry to view specific details about that entry using Intents**
 
 The following **optional** features are implemented:
 
-- [x] Improve and customize the user interface through styling and coloring
-- [ ] Implement orientation responsivity
-  - App should neatly arrange data in both landscape and portrait mode
-- [x] Implement Glide to display placeholder graphics during loading
-  - Note: this feature is difficult to capture in a GIF without throttling internet speeds.  Instead, include an additional screencap of your Glide code implementing the feature.  (<10 lines of code)
+- [ ] **Add another API call and RecyclerView that lets the user interact with different data.**
+- [ ] **Add rounded corners to the images using the Glide transformations**
+- [ ] **Implement a shared element transition when user clicks into the details of a movie**
 
 The following **additional** features are implemented:
 
@@ -30,10 +30,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='Flixster.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with GIF Maker 
+GIF created with ...
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -41,8 +41,7 @@ GIF created with GIF Maker
 
 ## Notes
 
--- Multiple typos
--- .load missing not allowing the app to show results due to error
+Describe any challenges encountered while building the app.
 
 ## License
 
