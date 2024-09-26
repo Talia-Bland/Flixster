@@ -62,6 +62,7 @@ class FlixsterMoviesRecyclerViewAdapter(
                 val intent = Intent(context,MovieDetailsActivity::class.java)
                 intent.putExtra("movie_title", movie.title)
                 intent.putExtra("movie_description", movie.description)
+                intent.putExtra("movie_poster_url", movie.moviePosterURL)
                 context.startActivity(intent)
 
             }

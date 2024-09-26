@@ -22,7 +22,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
-
+        val moviePosterURL = intent.getStringExtra("movie_poster_url")
 
         val movieTitleTextView: TextView = findViewById(R.id.movie_title_textview)
             val movieTitle = intent.getStringExtra("movie_title")
@@ -32,10 +32,10 @@ class MovieDetailsActivity : AppCompatActivity() {
             movieDescriptionTextView.text = movieDescription
 
         val moviePosterImageView: ImageView = findViewById(R.id.movie_poster_imageview)
-            val moviePosterURL = intent.getStringExtra("movie_poster_url")
+
 
         Glide.with(this)
-            .load(moviePosterURL)
+            .load("https://image.tmdb.org/t/p/w500/"+moviePosterURL)
             .fitCenter()
             .placeholder(R.drawable.placeholder_movieposter)
             .error(R.drawable.error_image)
