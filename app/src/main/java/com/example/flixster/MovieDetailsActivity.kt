@@ -1,6 +1,8 @@
 package com.example.flixster
 
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,22 @@ class MovieDetailsActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
+
+
+        val movieTitleTextView: TextView = findViewById(R.id.movie_title_textview)
+            val movieTitle = intent.getStringExtra("movie_title")
+            movieTitleTextView.text = movieTitle
+        val movieDescriptionTextView: TextView = findViewById(R.id.movie_description_textview)
+            val movieDescription = intent.getStringExtra("movie_description")
+            movieDescriptionTextView.text = movieDescription
+
+        val moviePosterImageView: ImageView = findViewById(R.id.movie_poster_imageview)
+            val moviePosterURL = intent.get
+
+
+
     }
 }

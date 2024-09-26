@@ -9,7 +9,7 @@
     android:background="@color/orange">
 
     <ImageView
-        android:id="@+id/movie_poster_view"
+        android:id="@+id/movie_poster_imageview"
         android:layout_width="341dp"
         android:layout_height="228dp"
         android:layout_marginStart="32dp"
@@ -22,7 +22,7 @@
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
     <TextView
-        android:id="@+id/movie_title_view"
+        android:id="@+id/movie_title_textview"
         android:layout_width="411dp"
         android:layout_height="44dp"
         android:background="@color/darkred"
@@ -35,7 +35,7 @@
         tools:layout_editor_absoluteY="244dp" />
 
     <TextView
-        android:id="@+id/movie_description_view"
+        android:id="@+id/movie_description_textview"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"

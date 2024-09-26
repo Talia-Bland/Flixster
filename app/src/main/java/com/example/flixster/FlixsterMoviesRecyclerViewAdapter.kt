@@ -1,10 +1,12 @@
 package com.example.flixster
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -36,6 +38,7 @@ class FlixsterMoviesRecyclerViewAdapter(
         override fun onBindViewHolder(holder: FlixsterMoviesRecyclerViewAdapter.MovieViewHolder, position: Int){
             val movie = movies[position]
 
+
             holder.mMovie = movie
             holder.mMovieTitle.text = movie.title
             holder.mMovieDes.text = movie.description
@@ -47,11 +50,23 @@ class FlixsterMoviesRecyclerViewAdapter(
                 .error(R.drawable.error_image)
                 .into(holder.mMoviePoster)
 
-            holder.mView.setOnClickListener{
-                holder.mMovie?.let {
-                    movie -> mListener?.onItemClick(movie)
-                }
+//            holder.mView.setOnClickListener{
+//                holder.mMovie?.let {
+//                    movie -> mListener?.onItemClick(movie)
+//                }
+//            }
+
+            holder.mMoviePoster.setOnClickListener{
+                val context = holder.mView.context
+
+                val intent = Intent(context,MovieDetailsActivity::class.java)
+                intent.putExtra("movie_title", movie.title)
+                intent.putExtra("movie_description", movie.description)
+                context.startActivity(intent)
+
             }
+
+
         }
 
         override fun getItemCount(): Int {
