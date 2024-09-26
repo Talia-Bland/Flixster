@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 
 class MovieDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +32,14 @@ class MovieDetailsActivity : AppCompatActivity() {
             movieDescriptionTextView.text = movieDescription
 
         val moviePosterImageView: ImageView = findViewById(R.id.movie_poster_imageview)
-            val moviePosterURL = intent.get
+            val moviePosterURL = intent.getStringExtra("movie_poster_url")
+
+        Glide.with(this)
+            .load(moviePosterURL)
+            .fitCenter()
+            .placeholder(R.drawable.placeholder_movieposter)
+            .error(R.drawable.error_image)
+            .into(moviePosterImageView)
 
 
 
