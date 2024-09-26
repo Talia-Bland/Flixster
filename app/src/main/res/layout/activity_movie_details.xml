@@ -31,37 +31,25 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="244dp" />
+        app:layout_constraintTop_toBottomOf="@+id/movie_poster_imageview" />
 
     <TextView
         android:id="@+id/movie_description_textview"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="81dp"
         android:ellipsize="end"
         android:maxLines="6"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movie_title_view" />
+        app:layout_constraintTop_toBottomOf="@+id/movie_title_textview" />
 
-    <TextView
-        android:id="@+id/movie_theaters"
-        android:layout_width="411dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="147dp"
-        android:background="@color/darkred"
-        android:textAlignment="center"
-        android:textColor="@color/blue"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movie_description_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
