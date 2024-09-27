@@ -14,4 +14,10 @@ class FlixsterMovie {
    @JvmField
    @SerializedName("poster_path")
    var moviePosterURL: String? = null
+
+    @JvmField
+    @SerializedName("rating")
+    var movieRating: Int? = null
+
+
 }
